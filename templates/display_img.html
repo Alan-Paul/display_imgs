@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+    <link rel="stylesheet" href="/static/css/search_eye.css">
+<div style="width:980px;margin: auto">
+
+
+
+ <div class="productlist">
+        <ul class="">
+            {% for item in all_img %}
+            <li>
+                <div class="productitem">
+                    <span class="productimg">
+                        <img width="190" height="190"  src="imgs/{{ item }}" style="display: block;">
+                    </span>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    <br clear="all">
+ </div>
+{% if pagerange %}
+        <nav class="page-direct">
+            <ul class="pagination">
+                <li><a href="?p=1">&laquo;</a></li>
+            <li><a href="?p={{ nowpage|add:-1 }}"> <</a></li>
+                {% for i in pagerange%}
+                    {% if nowpage == i %}
+                        <li><a style="border-color: #D4D4D4;background-color: #D4D4D4;color: #fff;cursor:auto;">{{i}}</a></li>
+                    {% else %}
+                        <li><a href="?p={{i}}">{{i}}</a></li>
+                    {% endif %}
+                {% endfor %}
+            <li><a href="?p={{ nowpage|add:1 }}">> </a></li>
+                <li><a href="?p={{pageend}}">&raquo;</a></li>
+            </ul>
+        </nav>
+        {% endif %}
+</div>
+
+<script type="text/javascript" src="/static/js/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="/static/js/search_eye.js"></script>
+
+{% endblock %}
+

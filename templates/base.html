@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display_imgs</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+</head>
+<body>
+ {% block content %}{% endblock %}
+
+
+
+<script type="text/javascript" src="/static/js/jquery-3.0.0.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
+<script src="/static/js/header.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    footerPosition();
+});
+function footerPosition(){
+    myfooter = document.getElementById('myfooter');
+    {#myfooter.classList.remove("fixed-bottom");#}
+    //网页正文全文高度
+    var contentHeight = document.body.scrollHeight;
+    if(contentHeight==0){
+        contentHeight=document.documentElement.scrollHeight;
+    }
+    //可视窗口高度，不包括浏览器顶部工具栏
+    winHeight = window.innerHeight;
+    if(!(contentHeight > winHeight)){
+        {#console.log(666);#}
+        //当网页正文高度小于可视窗口高度时，为footer添加类fixed-bottom
+        myfooter.classList.remove("footer-background")
+        {#myfooter.classList.add("fixed-bottom");#}
+    } else {
+        {#console.log(myfooter);#}
+        {#myfooter.classList.remove("fixed-bottom");#}
+        myfooter.style.top=contentHeight+50+'px';
+        {#console.log(888);#}
+    }
+}
+{#$(window).resize(footerPosition);#}
+
+</script>
+</body>
+</html>
+

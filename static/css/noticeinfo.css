@@ -1,0 +1,29 @@
+
+.ksgh_content{
+    position: relative;
+    top:120px;
+    width:1020px;
+    margin: 0 auto;
+}
+
+#ksgh_top{overflow:hidden;width:1020px;margin-bottom:17px;}
+.ksgh_top_title{ border-bottom: 2px solid #49a6d8;height:80px;font-size: 20px;text-align: center;margin-top: 20px }
+/*.ksgh_top_p{background:url("../img/nav_li_a.jpg") no-repeat;width: 135px;height: 30px;  text-align: left;line-height: 30px;font-size: 15px;color: #fff;padding-left:19px;}*/
+.ksgh_top_content{width:1020px;border:1px solid #dcdddd;border-top:0;}
+
+.noinfo_organ{text-align:right;width:980px;margin: auto;}
+.noinfo_content{width:980px;overflow:hidden;margin: auto;text-indent:30px;}
+.noinfo_title{margin-top:40px}
+.pre{white-space: pre-wrap;word-wrap: break-word;background-color: white;border: white;}
+
+/*按科室挂号下面内容*/
+#ksgh_c_content{width:1020px;margin:0 auto;overflow:auto;position:relative;}
+
+
+
+.page-direct{
+    position: absolute;
+    /*top: 930px;*/
+    top:680px;
+    right: 500px;
+}
