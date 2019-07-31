@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import os
-from Controller.settings import IMG_LIST, IMG_PER_PAGE
+from main_settings.settings import IMG_LIST, IMG_PER_PAGE
 
 def display_img(request):
     img_path, page_range = generateImgPath()
